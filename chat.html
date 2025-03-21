@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+        <link rel="stylesheet" href="navbar.css">
+        <link rel="stylesheet" href="chat.css">
+        <title>Chat</title>
+    </head>
+    <body>
+
+        <div class="loader-container">
+            <div class="logo"><img src="logo_2_trans.png" alt="" style="height: 200px;"></div>
+            <div class="loader-text">Loading<span class="dots"></span></div>
+        </div>
+
+        <header class="header">
+            <div class="header__container">
+                <img src="logo_3_trans.png" alt="" class="header__img">
+
+                <a href="#" class="header__logo"></a>
+                <div class="header__toggle">
+                    <i class='bx bx-menu' id="header-toggle"></i>
+                </div>
+            </div>
+        </header>
+
+        <div class="nav" id="navbar">
+            <nav class="nav__container">
+                <div>
+                    <a href="#" class="nav__link nav__logo">
+                        <i class='bx bxs-user nav__icon' ></i>
+                        <span class="nav__logo-name">Hi, Username</span>
+                    </a>
+    
+                    <div class="nav__list">
+
+                        <div class="nav__items nav__link">    
+                                <i class='bx bx-hard-hat nav__icon' ></i>
+                                <span class="nav__name">About</span>
+                        </div>
+                        
+                        <div class="nav__items nav__link">    
+                            <i class='bx bx-data nav__icon'></i>
+                            <span class="nav__name">Your Memory Quota</span>
+                        </div>
+                        
+                        <!-- Progress Bar Section (Placed Below "Your Memory") -->
+                        <div class="memory-section">
+                            <div class="memory-progress">
+                                <div class="progress-bar" id="progress-bar"></div>
+                                <span class="progress-text" id="progress-text">0%</span>
+                            </div>
+                        
+                            <!-- Clear Memory Button -->
+                            <button class="clear-memory" onclick="clearMemory()">  <i class='bx bx-trash' ></i> Clear Memory</button>
+                        </div>
+
+                        <div class="nav__items nav__link">    
+                            <i class='bx bx-question-mark nav__icon' ></i>
+                            <span class="nav__name">FAQs</span>
+                    </div>
+                        
+
+                    </div>
+                </div>
+
+                <a href="#" class="nav__link nav__logout">
+                    <i class='bx bx-log-out nav__icon' ></i>
+                    <span class="nav__name">Log Out</span>
+                </a>
+            </nav>
+        </div>
+
+        
+        <div class="chat-input-container">
+            <input type="text" id="chat-input" placeholder="Type a message..." />
+            <button id="send-btn"><i class='bx bx-send input_items '></i></button>
+            <button id="mic-btn"><i class='bx bx-phone-call input_items ' ></i></button>
+        </div>
+
+        <!-- Chat Container -->
+        <div class="chat-container" id="chat-container">
+
+            <!-- Date Divider (Today) -->
+            <div class="date-divider">Today</div>
+
+            <!-- Incoming Message -->
+            <div class="chat-message incoming">
+                <div class="message-content">
+                    <p>Hello! Dhiya AI here!</p>
+                    <span class="timestamp">10:30 AM</span>
+                </div>
+            </div>
+
+            <!-- Outgoing Message -->
+            <div class="chat-message outgoing">
+                <div class="message-content">
+                    <p>Hello, Your Maalik Here!</p>
+                    <span class="timestamp">10:32 AM</span>
+                </div>
+            </div>
+
+        </div>
+
+
+
+        <script src="navbar.js"></script>
+        
+    </body>
+</html>

@@ -1,0 +1,126 @@
+.chat-input-container {
+    position: fixed;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 95%;
+    max-width: 500px;
+    display: flex;
+    align-items: center;
+    background: #1e1e1e;
+    padding: 10px;
+    border-radius: 25px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    border: 1px solid #333;
+}
+
+.chat-input-container input {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: white;
+    font-size: 16px;
+}
+
+.chat-input-container button {
+    background: transparent;
+    border: none;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+    margin-left: 10px;
+    transition: 0.3s;
+}
+
+.chat-input-container button:hover {
+    color: #fff;
+}
+
+#send-btn {
+    color: #fff;
+}
+
+#mic-btn {
+    color: #fff;
+}
+
+
+.chat-container {
+    padding: 10px;
+    overflow-y: auto;
+    max-height: 75vh;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Date Divider */
+.date-divider {
+    text-align: left;
+    color: #bbb;
+    font-size: 12px;
+    margin: 10px 0;
+    position: relative;
+}
+/* Right Side Dash */
+.date-divider::after {
+    content: "—";
+    font-size: 14px;
+    color: #bbb;
+    margin-left: 8px;
+}
+
+/* Common Chat Message Style */
+.chat-message {
+    display: flex;
+    max-width: 75%;
+    margin-bottom: 5px;
+}
+
+/* Incoming Messages (Left Side) */
+.incoming {
+    align-self: flex-start;
+}
+
+.incoming .message-content {
+    background: #333;
+    color: white;
+    padding: 6px 12px; /* ✅ Minimal padding */
+    border-radius: 18px; /* ✅ Circular look */
+    border-bottom-left-radius: 4px;
+    font-size: 14px; /* ✅ Smaller text */
+}
+
+/* Outgoing Messages (Right Side) */
+.outgoing {
+    align-self: flex-end;  /* ✅ Properly aligns message to the right */
+}
+
+.outgoing .message-content {
+    background: #e7e7e7;
+    color: black;
+    padding: 6px 12px; /* ✅ Minimal padding */
+    border-radius: 18px; /* ✅ Circular look */
+    border-bottom-right-radius: 4px;
+    font-size: 14px; /* ✅ Smaller text */
+}
+
+/* Timestamp - Incoming (Left Side) */
+.incoming .timestamp {
+    font-size: 10px;
+    color: #d1d1d1; /* ✅ Greenish for incoming */
+    display: block;
+    text-align: right;
+    margin-top: 3px;
+}
+
+/* Timestamp - Outgoing (Right Side) */
+.outgoing .timestamp {
+    font-size: 10px;
+    color: #333; /* ✅ Reddish for outgoing */
+    display: block;
+    text-align: right;
+    margin-top: 3px;
+}
